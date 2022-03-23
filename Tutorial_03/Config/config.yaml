@@ -1,7 +1,0 @@
-genome: Resources/data/genome
-ext: .fa
-samples:
-  A : Results/Rewrite/mapped_reads/A
-  B : Results/Rewrite/mapped_reads/B
-  C : Results/Rewrite/mapped_reads/C
-  D : Results/Rewrite/mapped_reads/D
