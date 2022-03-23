@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 41 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Tutorial_02/Workflow/Snakefile.smk:
+Missing input files for rule bcftools_call:
+Resources/genome.fa

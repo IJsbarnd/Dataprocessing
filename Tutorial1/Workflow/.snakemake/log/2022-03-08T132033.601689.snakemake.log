@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+clean        1              1              1
+total        1              1              1
+
+Select jobs to execute...
+
+[Tue Mar  8 13:20:34 2022]
+rule clean:
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Tue Mar  8 13:20:34 2022]
+Error in rule clean:
+    jobid: 0
+    shell:
+        rm -r Results/
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial1/Workflow/.snakemake/log/2022-03-08T132033.601689.snakemake.log

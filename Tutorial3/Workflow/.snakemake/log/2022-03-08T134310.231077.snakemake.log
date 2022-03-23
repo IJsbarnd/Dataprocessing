@@ -1,0 +1,37 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+samtools_sort        2              1              1
+total                2              1              1
+
+Select jobs to execute...
+
+[Tue Mar  8 13:43:10 2022]
+rule samtools_sort:
+    input: ../mapped_reads/B.bam
+    output: ../sorted_reads/B.bam
+    jobid: 0
+    wildcards: sample=B
+    resources: tmpdir=/tmp
+
+[Tue Mar  8 13:43:10 2022]
+Finished job 0.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Tue Mar  8 13:43:10 2022]
+rule samtools_sort:
+    input: ../mapped_reads/A.bam
+    output: ../sorted_reads/A.bam
+    jobid: 2
+    wildcards: sample=A
+    resources: tmpdir=/tmp
+
+[Tue Mar  8 13:43:10 2022]
+Finished job 2.
+2 of 2 steps (100%) done
+Complete log: /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial2/Workflow/.snakemake/log/2022-03-08T134310.231077.snakemake.log

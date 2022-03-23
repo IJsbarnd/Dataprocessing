@@ -1,0 +1,10 @@
+Building DAG of jobs...
+WorkflowError:
+MissingInputException: Missing input files for rule quantify_genes:
+Sample1.R2.fastq.gz
+genome.fa
+Sample1.R1.fastq.gz
+MissingInputException: Missing input files for rule quantify_genes:
+test.R1.fastq.gz
+test.R2.fastq.gz
+genome.fa

@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial1/Workflow/Snakefile.smk:
+Missing input files for rule all:
+results/collated.txt

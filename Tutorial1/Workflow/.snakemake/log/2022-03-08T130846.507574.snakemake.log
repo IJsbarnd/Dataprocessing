@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in line 7 of /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial1/Workflow/Snakefile.smk:
+Missing input files for rule quantify_genes:
+data/genome.fa
+data/Sample1.R1.fastq.gz
+data/Sample1.R2.fastq.gz

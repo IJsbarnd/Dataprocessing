@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count    min threads    max threads
+--------------  -------  -------------  -------------
+all                   1              1              1
+make_histogram        1              1              1
+total                 2              1              1
+
+Select jobs to execute...
+
+[Tue Mar 22 11:32:58 2022]
+rule make_histogram:
+    input: /commons/Themas/Thema11/Dataprocessing/WC04/data/gene_ex.csv
+    output: result/histogram.jpg
+    jobid: 1
+    resources: tmpdir=/tmp
+
+[Tue Mar 22 11:33:02 2022]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Tue Mar 22 11:33:02 2022]
+localrule all:
+    input: result/histogram.jpg
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Tue Mar 22 11:33:02 2022]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial4/Workflow/.snakemake/log/2022-03-22T113257.616283.snakemake.log

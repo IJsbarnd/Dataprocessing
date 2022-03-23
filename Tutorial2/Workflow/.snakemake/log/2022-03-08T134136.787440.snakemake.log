@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+bwa_map        2              1              1
+total          2              1              1
+
+Select jobs to execute...
+
+[Tue Mar  8 13:41:37 2022]
+Job 1: executing bwa mem on the following ../data/genome.fa ../data/samples/A.fastq to generate the following ../mapped_reads/A.bam
+
+[Tue Mar  8 13:41:38 2022]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Tue Mar  8 13:41:38 2022]
+Job 0: executing bwa mem on the following ../data/genome.fa ../data/samples/B.fastq to generate the following ../mapped_reads/B.bam
+
+[Tue Mar  8 13:41:39 2022]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial2/Workflow/.snakemake/log/2022-03-08T134136.787440.snakemake.log

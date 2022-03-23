@@ -1,0 +1,48 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+all                  1              1              1
+bcftools_call        1              1              1
+report               1              1              1
+total                3              1              1
+
+Select jobs to execute...
+
+[Tue Mar  8 13:53:56 2022]
+rule bcftools_call:
+    input: ../data/genome.fa, ../sorted_reads/A.bam, ../sorted_reads/B.bam, ../sorted_reads/C.bam, ../sorted_reads/D.bam, ../sorted_reads/A.bam.bai, ../sorted_reads/B.bam.bai, ../sorted_reads/C.bam.bai, ../sorted_reads/D.bam.bai
+    output: ../calls/all.vcf
+    jobid: 2
+    resources: tmpdir=/tmp
+
+[Tue Mar  8 13:53:57 2022]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Tue Mar  8 13:53:57 2022]
+rule report:
+    input: ../calls/all.vcf
+    output: ../out.html
+    jobid: 1
+    resources: tmpdir=/tmp
+
+[Tue Mar  8 13:53:57 2022]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Tue Mar  8 13:53:57 2022]
+localrule all:
+    input: ../out.html
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Tue Mar  8 13:53:57 2022]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /homes/ijapool/PycharmProjects/Dataprocessing2/Tutorial2/Workflow/.snakemake/log/2022-03-08T135356.200724.snakemake.log

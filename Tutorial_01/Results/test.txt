@@ -1,2 +1,0 @@
-Results/Sample3,Resources/genome.fa Resources/Sample3.R1.fastq.gz Resources/Sample3.R2.fastq.gz 
- Are processed correctly
