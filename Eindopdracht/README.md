@@ -34,23 +34,25 @@ In order to correctly run the pipeline the following packages need to be install
 ## Installation
 First make sure to clone or download this repo to get all the correct and updated scripts.
 
-Note: Step three can be skipped if there are already FastQ files present.
+Note: Step four can be skipped if there are already FastQ files present.
 
 * Step 1: After cloning the repo download the data, download your data, this would be FastQ files and a reference genome, for this project specifically the Glycine max (soybean) genome was used and two FastQ files were used.
 
-* Step 2: After the data has been downloaded, the Genome needs to be indexed, this can be done with BWA-map using the following command: `bwa index [genomefile]`. This will result in multiple index files for the genome, and the project will not run properly if this step is skipped.
+* Step 2: A new folder named "Resources" must be created to contain all the data.
 
-* Step 3: The SRA files need to be converted to FastQ files. In order to do this the SRA toolkit can be installed or any other SRA converter.
+* Step 3: After the data has been downloaded, the Genome needs to be indexed, this can be done with BWA-map using the following command: `bwa index [genomefile]`. This will result in multiple index files for the genome, and the project will not run properly if this step is skipped.
+
+* Step 4: The SRA files need to be converted to FastQ files. In order to do this the SRA toolkit can be installed or any other SRA converter.
 
 With the SRA toolkit open your terminal and use the following command: `prefetch SRR2073061` and the same for the other files.
 
-* Step 4: A virtual environment can also be created for this project although this is optional. This is achieved with the following commands:
+* Step 5: A virtual environment can also be created for this project although this is optional. This is achieved with the following commands:
 ```
 pip install virtualenv
 virtualenv data_processing
 source data_processing/venv/bin/activate
 ```
-* Step 5: The pipeline can be run with the following command: `snakemake --snakefile snakemake_main.smk -c8` or `snakemake --snakefile snakemake_main.smk --jobs` This will run the entire pipeline and create the quality checker image and the total overview of the pipeline.
+* Step 6: The pipeline can be run with the following command: `snakemake --snakefile snakemake_main.smk -c8` or `snakemake --snakefile snakemake_main.smk --jobs` This will run the entire pipeline and create the quality checker image and the total overview of the pipeline.
 
 ## Rules
 `rule cutadapt:` <br />
