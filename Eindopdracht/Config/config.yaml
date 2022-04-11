@@ -1,0 +1,6 @@
+refgenome: "/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Resources/Glycine_max_soybean.fa"
+Samples:
+  SRR2073061: SRR2073061
+  SRR2073062: SRR2073062
+wdir: "/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/"
+threads: 8

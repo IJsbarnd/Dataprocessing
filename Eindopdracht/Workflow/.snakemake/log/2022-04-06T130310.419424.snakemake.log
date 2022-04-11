@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 3 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/testsnake.smk:
+Missing input files for rule all:
+Results/output.html

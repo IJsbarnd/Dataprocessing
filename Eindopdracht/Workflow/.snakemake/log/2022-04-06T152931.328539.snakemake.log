@@ -1,0 +1,95 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count    min threads    max threads
+---------------  -------  -------------  -------------
+all                    1              1              1
+bcftools_call          1              1              1
+bwa_map                2              1              1
+plot_quals             1              1              1
+sametools_index        2              1              1
+samtools_sort          2              1              1
+total                  9              1              1
+
+Select jobs to execute...
+
+[Wed Apr  6 15:29:31 2022]
+Job 4: executing bwa mem on the following ../Resources/Glycine_max_soybean.fa ../Resources/SRR2073061.fastq to generate the following ../Results/mapped_reads/SRR2073061.bam
+
+[Wed Apr  6 15:32:16 2022]
+Finished job 4.
+1 of 9 steps (11%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:32:16 2022]
+Job 3: executing samtools sort on the following ../Results/mapped_reads/SRR2073061.bam to generate the following ../Results/sorted_reads/SRR2073061.bam.
+
+[Wed Apr  6 15:32:22 2022]
+Finished job 3.
+2 of 9 steps (22%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:32:23 2022]
+Job 6: executing bwa mem on the following ../Resources/Glycine_max_soybean.fa ../Resources/SRR2073062.fastq to generate the following ../Results/mapped_reads/SRR2073062.bam
+
+[Wed Apr  6 15:35:04 2022]
+Finished job 6.
+3 of 9 steps (33%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:35:04 2022]
+Job 5: executing samtools sort on the following ../Results/mapped_reads/SRR2073062.bam to generate the following ../Results/sorted_reads/SRR2073062.bam.
+
+[Wed Apr  6 15:35:11 2022]
+Finished job 5.
+4 of 9 steps (44%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:35:11 2022]
+Job 8: executing samtools index on the following ../Results/sorted_reads/SRR2073062.bam to generate the following ../Results/sorted_reads/SRR2073062.bam.bai.
+
+[Wed Apr  6 15:35:12 2022]
+Finished job 8.
+5 of 9 steps (56%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:35:12 2022]
+Job 7: executing samtools index on the following ../Results/sorted_reads/SRR2073061.bam to generate the following ../Results/sorted_reads/SRR2073061.bam.bai.
+
+[Wed Apr  6 15:35:13 2022]
+Finished job 7.
+6 of 9 steps (67%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:35:13 2022]
+Job 2: executing samtools and bcftools on the following ../Resources/Glycine_max_soybean.fa ../Results/sorted_reads/SRR2073061.bam ../Results/sorted_reads/SRR2073062.bam ../Results/sorted_reads/SRR2073061.bam.bai ../Results/sorted_reads/SRR2073062.bam.bai to generate the following ../Results/calls/all.vcf.
+
+[Wed Apr  6 15:38:37 2022]
+Finished job 2.
+7 of 9 steps (78%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:38:37 2022]
+rule plot_quals:
+    input: ../Results/calls/all.vcf
+    output: ../Results/plots/quals.svg
+    jobid: 1
+    resources: tmpdir=/tmp
+
+[Wed Apr  6 15:38:39 2022]
+Finished job 1.
+8 of 9 steps (89%) done
+Select jobs to execute...
+
+[Wed Apr  6 15:38:39 2022]
+localrule all:
+    input: ../Results/plots/quals.svg
+    jobid: 0
+    resources: tmpdir=/tmp
+
+[Wed Apr  6 15:38:39 2022]
+Finished job 0.
+9 of 9 steps (100%) done
+Complete log: /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/.snakemake/log/2022-04-06T152931.328539.snakemake.log

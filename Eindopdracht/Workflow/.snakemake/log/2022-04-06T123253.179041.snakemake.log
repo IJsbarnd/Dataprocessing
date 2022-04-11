@@ -1,0 +1,29 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count    min threads    max threads
+--------------  -------  -------------  -------------
+all                   1              1              1
+bcftools_call         1              1              1
+bwa_map               2              1              1
+plot_quals            1              1              1
+samtools_index        2              1              1
+samtools_sort         2              1              1
+total                 9              1              1
+
+Select jobs to execute...
+
+[Wed Apr  6 12:32:53 2022]
+Job 4: Executing 'bwa mem' with 1 threads on /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Resources/Glycine_max_soybean.faa /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Resources/SRR2073061.fastq
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in line 1 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/Mapping.smk:
+Job Missing files after 5 seconds:
+/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Resources/mapped_reads/SRR2073061.bam
+This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait.
+Job id: 4 completed successfully, but some output files are missing. 4
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/.snakemake/log/2022-04-06T123253.179041.snakemake.log

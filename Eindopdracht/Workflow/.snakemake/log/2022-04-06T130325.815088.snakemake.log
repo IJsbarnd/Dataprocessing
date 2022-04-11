@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 41 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/testsnake.smk:
+Missing input files for rule bcftools_call:
+Gmax_275_v2.0.softmasked.fa

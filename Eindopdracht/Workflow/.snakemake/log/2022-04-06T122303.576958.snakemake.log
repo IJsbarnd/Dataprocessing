@@ -1,0 +1,3 @@
+KeyError in line 3 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/testsnake.smk:
+'refgenome'
+  File "/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/testsnake.smk", line 3, in <module>

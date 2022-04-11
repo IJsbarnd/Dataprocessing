@@ -1,0 +1,4 @@
+TypeError in line 4 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/Mapping.smk:
+unsupported operand type(s) for +: 'dict' and 'str'
+  File "/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/main.smk", line 3, in <module>
+  File "/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/Mapping.smk", line 4, in <module>

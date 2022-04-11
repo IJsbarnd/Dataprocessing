@@ -1,0 +1,4 @@
+WorkflowError in line 4 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/main.smk:
+Failed to open source file /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/Samtools-Sort.smk
+FileNotFoundError: [Errno 2] No such file or directory: '/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/Samtools-Sort.smk'
+  File "/homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/main.smk", line 4, in <module>

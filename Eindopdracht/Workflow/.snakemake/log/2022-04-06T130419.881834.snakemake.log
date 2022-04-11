@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count    min threads    max threads
+---------------  -------  -------------  -------------
+all                    1              1              1
+bcftools_call          1              1              1
+bwa_map                2              1              1
+report                 1              1              1
+sametools_index        2              1              1
+samtools_sort          2              1              1
+total                  9              1              1
+
+Select jobs to execute...
+
+[Wed Apr  6 13:04:20 2022]
+Job 6: executing bwa mem on the following ../Resources/Glycine_max_soybean.faa ../Resources/SRR2073062.fastq to generate the following ../Results/mapped_reads/SRR2073062.bam
+
+[Wed Apr  6 13:04:20 2022]
+Error in rule bwa_map:
+    jobid: 6
+    output: ../Results/mapped_reads/SRR2073062.bam
+    shell:
+        bwa mem ../Resources/Glycine_max_soybean.faa ../Resources/SRR2073062.fastq | samtools view -Sb - > ../Results/mapped_reads/SRR2073062.bam
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job bwa_map since they might be corrupted:
+../Results/mapped_reads/SRR2073062.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/.snakemake/log/2022-04-06T130419.881834.snakemake.log

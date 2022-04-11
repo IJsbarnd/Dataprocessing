@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 1 of /homes/ijapool/Thema/thema11/dataprocessing/Dataprocessing/Eindopdracht/Workflow/Mapping.smk:
+Missing input files for rule bwa_map:
+Resources/Gmax_275_v2.0.softmasked.fa
