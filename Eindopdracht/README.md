@@ -6,8 +6,9 @@ __Course__: Dataprocessing Thema 11 2022
 ## Table of content
 
 - [Project description](#project-description)
-- [Installation](#installation)
-    * [Needed](#needed)
+- [Requirements](#Requirements)
+- [Installation](#Installation)
+- [Rules](#Rules)
 - [Command examples](#command-examples)
 - [Contact](#contact)
 
@@ -17,10 +18,7 @@ This repository is for the final assignment for the course dataprocessing, for t
 The pipeline comes from this [article](https://bmcbioinformatics.biomedcentral.com/track/pdf/10.1186/s12859-016-1431-9.pdf). 
 
 
-## Installation
-To be able to run this project snakemake package is required. A terminal which can run windows or linux commands is also required.
-
-### Needed
+### Requirements
 In order to correctly run the pipeline the following packages need to be installed on the system:
 ```
 * Python (Version 3.7 or higher)
@@ -33,15 +31,52 @@ In order to correctly run the pipeline the following packages need to be install
 * Samtools (Version 1.15)
 ```
 
+## Installation
+First make sure to clone or download this repo to get all the correct and updated scripts.
+
+Note: Step three can be skipped if there are already FastQ files present.
+
+* Step 1: After cloning the repo download the data, download your data, this would be FastQ files and a reference genome, for this project specifically the Glycine max (soybean) genome was used and two FastQ files were used.
+
+* Step 2: After the data has been downloaded, the Genome needs to be indexed, this can be done with BWA-map using the following command: `bwa index [genomefile]`. This will result in multiple index files for the genome, and the project will not run properly if this step is skipped.
+
+* Step 3: The SRA files need to be converted to FastQ files. In order to do this the SRA toolkit can be installed or any other SRA converter.
+
+With the SRA toolkit open your terminal and use the following command: `prefetch SRR2073061` and the same for the other files.
+
+* Step 4: A virtual environment can also be created for this project although this is optional. This is achieved with the following commands:
+```
+pip install virtualenv
+virtualenv data_processing
+source data_processing/venv/bin/activate
+```
+* Step 5: The pipeline can be run with the following command: `snakemake --snakefile snakemake_main.smk -c8` or `snakemake --snakefile snakemake_main.smk --jobs` This will run the entire pipeline and create the quality checker image and the total overview of the pipeline.
+
+## Rules
+`rule cutadapt:` <br />
+Finds and removes adapter sequences. <br />
+`rule bwa_map:` <br />
+Mapping low-divergent sequences against a large reference genome <br />
+`rule samtools_sort:` <br />
+Align FASTQ files with all current sequence aligners <br />
+`rule samtools_index:` <br />
+Quickly extracts alignments overlapping on particular genomic regions. <br />
+`rule bcftools_call:` <br />
+Variant calling by making use of the reference genome <br />
+`rule plot_quality:` <br />
+Plots the quality of the reads by making use of Quality.py <br />
+`rule dag_file:` <br />
+Creates the dag file that represents the steps from the pipeline.
+
 ## Command examples
 In order to be able to run the pipeline, a command as this can be used:
-`snakemake --snakefile Snakefile.smk -c1`
+`snakemake --snakefile main.smk -c1`
 
 The `-c1` command here expresses the amount of cores, this is a required argument or the pipeline will not run.
 
 In order to generate an image the following command can be used:
-`snakemake --snakefile Snakefile.smk --dag | dot -Tpng > dag.png`
+`snakemake --snakefile Snakefile.smk --dag | dot -Tpng > ../Results/dag.png`
 
 ## Contact
 Please contact the email below for any questions regarding the pipeline.
-* j.l.a.eisinga@st.hanze.nl
+* i.j.a.pool@st.hanze.nl
